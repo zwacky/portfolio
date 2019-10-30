@@ -1,7 +1,12 @@
 // Load CSS Reset from NPM
 @import '~normalize.css';
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins/breakpoints';
 @import '~bootstrap/scss/bootstrap-reboot';
 @import '~bootstrap/scss/bootstrap-grid';
+@import '~bootstrap/scss/utilities/text';
+@import '~bootstrap/scss/utilities/display';
 
 $primary-color: #f17b7b;
 $secondary-color: #645ed8;
@@ -84,6 +89,10 @@ footer {
 		&__item {
 			margin-left: 32px;
 
+			@include media-breakpoint-down(sm) {
+				margin-left: 16px;
+			}
+
 			&--icon {
 				// height: 22px;
 				position: relative;
@@ -116,6 +125,20 @@ footer {
 
 		&:hover {
 			color: white;
+		}
+	}
+}
+
+.section {
+	&__title {
+		text-align: right;
+		padding-right: 64px;
+		font-weight: 400;
+
+		@include media-breakpoint-down(sm) {
+			text-align: left;
+			padding-left: 15px;
+			padding-bottom: 15px;
 		}
 	}
 }
@@ -184,38 +207,98 @@ footer {
 	background-color: $light;
 	min-height: 80vh;
 	padding: 20vh 0;
+
+	&__bio {
+		display: flex;
+
+		@include media-breakpoint-down(xs) {
+			flex-direction: column;
+		}
+
+		&__profile {
+			flex: 0 0 150px;
+			padding-right: 32px;
+
+			@include media-breakpoint-up(sm) {
+				flex-basis: 135px;
+			}
+
+			@include media-breakpoint-down(xs) {
+				padding-right: 0;
+				padding-bottom: 20px;
+
+				&--image {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					padding: 0 25%;
+				}
+			}
+
+			&--image {
+				border-radius: 50%;
+				max-width: 100%;
+			}
+		}
+	}
+
+	&__time {
+		flex: 0 0 135px;
+		padding-right: 32px;
+
+		@include media-breakpoint-down(sm) {
+			padding-right: 0;
+			flex-basis: 100px;
+		}
+	}
 }
 
 .projects {
 	min-height: 100vh;
 	padding: 20vh 0;
 
-	&__selectors {
-		a {
-			margin-right: 32px;
-			// border-color: $dark;
-			color: $dark;
-			border-width: 4px;
-			border-color: transparent;
-			// font-weight: 700;
+	&__list {
+		padding-left: 150px;
 
-			transition: color 0.2s ease, border-color 0.2s ease;
+		@include media-breakpoint-down(sm) {
+			padding-left: 15px;
+		}
 
-			&.active {
-				border-color: $light;
-				// color: $dark;
+		&__selectors {
+			a {
+				margin-right: 32px;
+				// border-color: $dark;
+				color: $dark;
 				border-width: 4px;
-			}
+				border-color: transparent;
+				// font-weight: 700;
 
-			// &:hover:not(.active) {
-			// 	border-color: $dark;
-			// 	color: change-color($dark, $alpha: 0.5);
-			// 	font-weight: 700;
-			// }
+				transition: color 0.2s ease, border-color 0.2s ease;
+
+				&.active {
+					border-color: $light;
+					// color: $dark;
+					border-width: 4px;
+				}
+
+				@include media-breakpoint-down(xs) {
+					margin-right: 16px;
+				}
+
+				// &:hover:not(.active) {
+				// 	border-color: $dark;
+				// 	color: change-color($dark, $alpha: 0.5);
+				// 	font-weight: 700;
+				// }
+			}
 		}
 	}
 
 	&__grid {
+		margin: 0;
+		margin-left: -30px;
+		margin-right: -15px;
+
 		&__item {
 			&--image {
 				position: relative;
@@ -225,6 +308,10 @@ footer {
 				background-repeat: no-repeat;
 				background-position: center;
 				background-size: cover;
+
+				@include media-breakpoint-between(sm, md) {
+					height: 135px;
+				}
 
 				a & {
 					background-color: change-color($light, $alpha: 0.5);

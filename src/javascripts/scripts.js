@@ -18,19 +18,19 @@ document.addEventListener('DOMContentLoaded', function() {
 		speed: 500,
 	});
 
-	[].forEach.call(document.querySelectorAll('.projects__selectors a'), el => {
+	[].forEach.call(document.querySelectorAll('.projects__list__selectors a'), el => {
 		el.addEventListener('click', evt => {
 			evt.preventDefault();
 
 			if (
-				document.querySelectorAll('.projects__selectors a.active').length ===
-				document.querySelectorAll('.projects__selectors a').length
+				document.querySelectorAll('.projects__list__selectors a.active').length ===
+				document.querySelectorAll('.projects__list__selectors a').length
 			) {
 				// check if all selectors are selected -> select the clicked one
 				setActive(el);
 			} else if (
 				el.className === 'active' &&
-				document.querySelectorAll('.projects__selectors a.active').length === 1
+				document.querySelectorAll('.projects__list__selectors a.active').length === 1
 			) {
 				// check if the clicked one is already selected and is the only selected one -> set all active
 				setAllActive();
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
 				setActive(el);
 			}
 
-			const groups = [].map.call(document.querySelectorAll('.projects__selectors a.active'), el => {
+			const groups = [].map.call(document.querySelectorAll('.projects__list__selectors a.active'), el => {
 				return el.getAttribute('data-group');
 			});
 			shuffle.filter(groups);
@@ -47,13 +47,13 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function setActive(activeElement) {
-	[].forEach.call(document.querySelectorAll('.projects__selectors a'), el => {
+	[].forEach.call(document.querySelectorAll('.projects__list__selectors a'), el => {
 		el.className = el === activeElement ? 'active' : '';
 	});
 }
 
 function setAllActive() {
-	[].forEach.call(document.querySelectorAll('.projects__selectors a'), el => {
+	[].forEach.call(document.querySelectorAll('.projects__list__selectors a'), el => {
 		el.className = 'active';
 	});
 }

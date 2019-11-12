@@ -1,92 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Simon Wicki — Frontend Engineer</title>
-		<link
-			href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400|Playfair+Display:300,400,700"
-			rel="stylesheet"
-		/>
-		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
-		/>
-		<meta name="keywords" content="Frontend, Berlin, Ionic, VueJS, Angular, Capacitor, Cordova" />
-		<meta name="description" content="Fontend Engineer from Berlin working with Ionic, VueJS, Angular, Capacitor, Cordova" />
+	
+	${require('./partials/head.html')}
 
-		<!-- facebook OG -->
-		<meta property="og:site_name" content="Simon Wicki" />
-		<meta property="fb:app_id" content="" />
-		<!-- <meta property="og:title" content="" />
-		<meta property="og:description" content="" /> -->
-		<meta property="og:image" content="./images/favicons/android-chrome-256x256.png" />
-		<meta property="og:image:width" content="256" />
-		<meta property="og:image:height" content="256" />
-
-		<meta name="mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="theme-color" content="#fff" />
-	</head>
 	<body id="top">
-		<nav class="nav">
-			<div class="container">
-				<div class="nav__list">
-					<!-- <a href class="nav--brand">W</a> -->
-					<a href class="nav--brand" style="overflow: hidden;">
-						<img src="./images/logo.png" alt="W" width="38" />
-					</a>
-					<div>
-						<a href="#work" class="nav__list__item">Work</a>
-						<a href="#projects" class="nav__list__item">Projects</a>
-						<a class="d-none d-sm-inline nav__list__item nav__list__item--mail" href="mailto:simon@wicki.io" class="nav__list__item nav__list__item--mail">
-							Contact
-						</a>
-						<a class="d-inline d-sm-none nav__list__item nav__list__item--mail" href="mailto:simon@wicki.io">
-								<img src="./images/svg/envelope.svg" alt="Contact" title="Contact" style="height: 18px; position: relative; top: -2px;" />
-						</a>
-					</div>
-				</div>
-			</div>
-		</nav>
+
+		${require('./partials/nav.html')}
 
 		<section class="hero">
-			<!-- <div class="hero--dotted" style="z-index: 2; left: -50px; width: 150px; height: 150px;"></div> -->
-			<!-- <div
-				style="position: absolute; z-index: 1; left: 0px; transform: translateY(50px); width: 200px; height: 150px; background-color: #d0cef3;"
-			></div> -->
-
-			<!-- <div
-				class="hero--dotted"
-				style="z-index: 2; right: 0px; bottom: 0; transform: translate(50%, 75%); border-radius: 50%; width: 50vw; height: 50vw; background-image: radial-gradient(#e4e4f0 2px, transparent 2px);"
-			></div> -->
-			<!-- <div>
-				<svg
-					width="600"
-					height="600"
-					viewBox="0 0 600 600"
-					xmlns="http://www.w3.org/2000/svg"
-					style="position: absolute;"
-					xxx-class="hero--dotted"
-					xxx-style="z-index: 2; border-radius: 50%; width: 50vw; height: 50vw; background-image: radial-gradient(#e4e4f0 2px, transparent 2px);"
-				>
-					<defs>
-						<radialGradient id="MyGradient" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="20">
-							<stop offset="0%" stop-color="#e4e4f0" />
-						</radialGradient>
-
-						<pattern id="muster_c" patternUnits="userSpaceOnUse" width="10" height="10" x="0" y="0">
-							<circle cx="5" cy="5" r="2" fill="url(#MyGradient)" />
-						</pattern>
-					</defs>
-					<g xxtransform="translate(300,300)">
-						<path
-							d="M347.73739892524725,173.10369583486556 C311.9811489252472,208.85994583486558 101.64610892524718,308.7992958348656 57.8540189252472,283.5170458348656 C14.061938925247205,258.23319583486557 120.75107892524721,179.94775583486557 101.6818089252472,116.87295583486559 C82.61253892524718,53.79814583486558 202.93489892524718,-39.56506416513443 257.8002989252472,-23.34514416513443 L257.05537892524717,-24.310804165134428 L347.73739892524725,173.10369583486556 z"
-							fill="url(#muster_c)"
-						/>
-					</g>
-				</svg>
-			</div> -->
-
 			<div class="hero__intro">
 				<div class="container">
 					Hello,<br />
@@ -96,10 +17,6 @@
 						Frontend Engineer from Berlin
 					</div>
 				</div>
-
-				<!-- <div class="hero__intro__description">
-                    <strong style="font-weight: 500;">Frontend Engineer</strong> from Berlin
-            </div> -->
 			</div>
 		</section>
 
@@ -365,17 +282,7 @@
 		</section>
 
 	</body>
-	<footer>
-		<div class="container">
-			<div style="display: flex; justify-content: space-between;">
-				<div>
-					Made with <img src="./images/svg/coffee.svg" alt="Coffee" style="opacity: 0.5; height: 16px;" /> and <img src="./images/svg/heart.svg" alt="Love" style="opacity: 0.5; height: 16px;" />
-				</div>
-				<div>
-					<a href="./imprint">Imprint</a>
-				</div>
-			
-			</div>
-		</div>
-	</footer>
+	
+	${require('./partials/footer.html')}
+
 </html>

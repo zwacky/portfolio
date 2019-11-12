@@ -32,7 +32,7 @@ a {
 
 	.nav &,
 	&.no-border,
-	footer & {
+	.footer & {
 		border-bottom: none;
 	}
 
@@ -62,11 +62,21 @@ body {
 	color: change-color($dark, $alpha: 0.5);
 }
 
-footer {
+.footer {
 	border-top: 1px solid $light;
 	margin-top: 100px;
 	padding: 10px 0;
 	text-align: right;
+
+	&__shoutout {
+		text-align: left;
+	}
+
+	&__links {
+		a:not(:first-child) {
+			padding-left: 18px;
+		}
+	}
 }
 
 .nav {
@@ -220,7 +230,7 @@ footer {
 			padding-right: 32px;
 
 			@include media-breakpoint-up(sm) {
-				flex-basis: 135px;
+				flex-basis: 140px;
 			}
 
 			@include media-breakpoint-down(xs) {

@@ -7,6 +7,9 @@
 const Shuffle = require('shufflejs').default;
 
 document.addEventListener('DOMContentLoaded', function() {
+	if (window.location.pathname !== '/') {
+		return;
+	}
 	document.querySelector('.nav--brand').addEventListener('click', evt => {
 		evt.preventDefault();
 		window.scrollTo({ top: 0, behavior: 'smooth' });

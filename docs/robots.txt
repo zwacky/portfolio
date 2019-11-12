@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://wicki.io/sitemap.xml
-Host: https://wicki.io

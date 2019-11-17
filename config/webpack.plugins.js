@@ -13,6 +13,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const RobotstxtPlugin = require('robotstxt-webpack-plugin');
 const SitemapPlugin = require('sitemap-webpack-plugin').default;
+const CopyPlugin = require('copy-webpack-plugin');
 
 const config = require('./site.config');
 
@@ -132,6 +133,9 @@ const google = new GoogleAnalyticsPlugin({
 	id: config.googleAnalyticsUA,
 });
 
+// add files (e.g. CNAME file for github pages hosting)
+const copyFiles = new CopyPlugin(['../CNAME']);
+
 module.exports = [
 	clean,
 	stylelint,
@@ -144,4 +148,5 @@ module.exports = [
 	config.googleAnalyticsUA && google,
 	webpackBar,
 	config.env === 'development' && hmr,
+	copyFiles,
 ].filter(Boolean);

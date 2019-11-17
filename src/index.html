@@ -27,15 +27,15 @@
 						<div class="row">
 							<div class="about__bio">
 								<div class="about__bio__profile">
-									<img src="./images/me.jpg" class="about__bio__profile--image" />
+									<img src="./images/me.jpg" alt="Simon Wicki" class="about__bio__profile--image" />
 								</div>
 								<div>
 									<h1 style="font-size: 1.5rem;">Simon Wicki</h1>
 									<h2 style="font-weight: 400; color: inherit; font-size: 1rem; margin-bottom: 1rem;">
 										Previously Head of Frontend at
-										<a href="https://www.justwatch.com">JustWatch</a>. Co-organizer of
-										<a href="">@IonicBerlin</a>. Creator of
-										<a href="https://notyfy.co">https://notyfy.co</a>. I love building things,
+										<a href="https://www.justwatch.com" rel="noopener" target="_blank">JustWatch</a>. Co-organizer of
+										<a href="https://www.meetup.com/Ionic-Berlin/" rel="noopener" target="_blank">@IonicBerlin</a>. Creator of
+										<a href="https://notyfy.co" rel="noopener" target="_blank">https://notyfy.co</a>. I love building things,
 										coffee and books. Berlin.
 									</h2>
 									<div style="font-weight: 400;">
@@ -45,19 +45,19 @@
 										Cordova / Capacitor
 									</div>
 									<div style="margin-top: 6px;">
-											<a href="https://medium.com/@zwacky" target="_blank" class="no-border" style="margin-right: 10px;">
+											<a href="https://medium.com/@zwacky" target="_blank" rel="noopener" class="no-border" style="margin-right: 10px;">
 												<img src="./images/svg/medium.svg" alt="Medium" title="Medium" style="height: 18px; opacity: 0.6;" />
 											</a>
-											<a href="https://twitter.com/zwacky" target="_blank" class="no-border" style="margin-right: 10px;">
+											<a href="https://twitter.com/zwacky" target="_blank" rel="noopener" class="no-border" style="margin-right: 10px;">
 												<img src="./images/svg/twitter.svg" alt="Twitter" title="Twitter" style="height: 18px; opacity: 0.6;" />
 											</a>
-											<a href="https://github.com/zwacky" target="_blank" class="no-border" style="margin-right: 10px;">
+											<a href="https://github.com/zwacky" target="_blank" rel="noopener" class="no-border" style="margin-right: 10px;">
 												<img src="./images/svg/github.svg" alt="GitHub" title="GitHub" style="height: 18px; opacity: 0.6;" />
 											</a>
-											<a href="https://www.linkedin.com/in/simon-w-490b8617a" target="_blank" class="no-border" style="margin-right: 10px;">
+											<a href="https://www.linkedin.com/in/simon-w-490b8617a" target="_blank" rel="noopener" class="no-border" style="margin-right: 10px;">
 												<img src="./images/svg/linkedin.svg" alt="LinkedIn" title="LinkedIn" style="height: 18px; opacity: 0.6;" />
 											</a>
-											<a href="mailto:simon@wicki.io" target="_blank" class="no-border" style="margin-right: 10px;">
+											<a href="mailto:simon@wicki.io" target="_blank" rel="noopener" class="no-border" style="margin-right: 10px;">
 												<img src="./images/svg/envelope.svg" alt="LinkedIn" title="LinkedIn" style="height: 18px; opacity: 0.6;" />
 											</a>
 										</div>
@@ -79,14 +79,14 @@
 								<div class="about__time">
 									<div class="title">2015 - 2019</div>
 									<div style="font-weight: 400;">
-										<a href="https://www.justwatch.com" target="_blank">JustWatch</a>
+										<a href="https://www.justwatch.com" target="_blank" rel="noopener">JustWatch</a>
 									</div>
 								</div>
 								<div>
 									<div class="title">Head of Frontend</div>
 									<p style="font-weight: 400;">
 										At JustWatch I was responsible developing and maintaining one of the biggest Ionic hybrid apps in the
-										world, reaching 12M monthly active users over iOS, Android and web.<br />
+										world with 12M monthly active users over iOS, Android and web.<br />
 										Fully migrated the code base from Ionic v1, AngularJS and Cordova to Ionic v4, VueJS, VueX, Capacitor and TypeScript.<br />
 										Conducting A/B tests while maintaining a high functioning SEO site. Lead a team
 										of frontend engineers.
@@ -142,27 +142,11 @@
 
 							<div class="projects__grid">
 									
-								<!-- 
 								<div class="col-sm-6 projects__grid__item" data-groups='["featured"]' style="margin-top: 32px;">
-									<div class="projects__grid__item--image"></div>
-									<div class="title">
-										Migration AngularJS to VueJS (52k
-										<span
-											style="border-bottom: 1px dotted rgba(32, 30, 69, 0.5)"
-											title="Lines of code"
-											>LOC</span
-										>)
-									</div>
-									<div>
-										TypeScript <span style="margin: 0 6px;">·</span> VueJS
-										<span style="margin: 0 6px;">·</span> Ionic 4
-										<span style="margin: 0 6px;">·</span> Capacitor
-									</div>
-								</div>
-								-->
-								<div class="col-sm-6 projects__grid__item" data-groups='["featured"]' style="margin-top: 32px;">
-									<a href="https://www.justwatch.com" target="_blank" class="no-border">
-										<div class="projects__grid__item--image" style="background-image: url('${require('./images/projects/justwatch.png')}')"></div>
+									<a id="youtube-play" href="https://www.justwatch.com" target="_blank" rel="noopener" class="no-border">
+										<div class="projects__grid__item--image" style="background-image: url('${require(`./images/projects/justwatch.png`)}')">
+											<div class="projects__grid__item--play-annotation">&#9658;</div>
+										</div>
 										<div class="title">
 											JustWatch
 										</div>
@@ -173,8 +157,8 @@
 									</div>
 								</div>
 								<div class="col-sm-6 projects__grid__item" data-groups='["hobby"]' style="margin-top: 32px;">
-									<a href="https://notyfy.co" target="_blank" class="no-border">
-										<div class="projects__grid__item--image" style="background-image: url('${require('./images/projects/notyfy.png')}')"></div>
+									<a href="https://notyfy.co" target="_blank" rel="noopener" class="no-border">
+										<div class="projects__grid__item--image" style="background-image: url('${require(`./images/projects/notyfy.png`)}')"></div>
 										<div class="title" style="display: block;">
 											Notyfy
 										</div>
@@ -185,8 +169,8 @@
 									</div>
 								</div>
 								<div class="col-sm-6 projects__grid__item" data-groups='["hobby"]' style="margin-top: 32px;">
-									<a href="https://www.facebook.com/pokemondexgo" target="_blank" class="no-border">
-										<div class="projects__grid__item--image" style="background-image: url('${require('./images/projects/pokedexgo.png')}')"></div>
+									<a href="https://www.facebook.com/pokemondexgo" target="_blank" rel="noopener" class="no-border">
+										<div class="projects__grid__item--image" style="background-image: url('${require(`./images/projects/pokedexgo.png`)}')"></div>
 										<div class="title" style="display: block;">Facebook Messenger Chat Bot</div>
 									</a>
 									<div class="projects__grid__item--tech">
@@ -195,8 +179,8 @@
 									</div>
 								</div>
 								<div class="col-sm-6 projects__grid__item" data-groups='["hobby"]' style="margin-top: 32px;">
-									<a href="https://gamemusicplayer.io" target="_blank">
-										<div class="projects__grid__item--image" style="background-image: url('${require('./images/projects/gamemusicplayer.png')}')"></div>
+									<a href="https://gamemusicplayer.io" target="_blank" rel="noopener">
+										<div class="projects__grid__item--image" style="background-image: url('${require(`./images/projects/gamemusicplayer.png`)}')"></div>
 										<div class="title" style="display: block;">
 											Game Music Player PWA
 										</div>
@@ -233,43 +217,43 @@
 								-->
 
 								<div class="col-sm-6 projects__grid__item" data-groups='["talks"]' style="margin-top: 32px;">
-									<a href="https://docs.google.com/presentation/d/1IvOYAvMttqobkTVtoC8nX-EY8kNv7Hu2pqG0BTNM38o" target="_blank">
-										<div class="projects__grid__item--image" style="background-image: url('${require('./images/projects/talk-ionic-migration.png')}');"></div>
+									<a href="https://docs.google.com/presentation/d/1IvOYAvMttqobkTVtoC8nX-EY8kNv7Hu2pqG0BTNM38o" target="_blank" rel="noopener">
+										<div class="projects__grid__item--image" style="background-image: url('${require(`./images/projects/talk-ionic-migration.png`)}');"></div>
 										<div class="title" style="display: block;">Ionic Migration AngularJS to VueJS</div>
 									</a>
 									<div class="projects__grid__item--tech">Talk <span style="margin: 0 6px;">·</span> 2019</div>
 								</div>
 								<div class="col-sm-6 projects__grid__item" data-groups='["talks"]' style="margin-top: 32px;">
-									<a href="https://docs.google.com/presentation/d/1VUN2C2nC2AApPDh_Jy_7MwYprWIFGI93gLvBre399l4" target="_blank">
-										<div class="projects__grid__item--image" style="background-image: url('${require('./images/projects/talk-vuejs-ionic.png')}');"></div>
+									<a href="https://docs.google.com/presentation/d/1VUN2C2nC2AApPDh_Jy_7MwYprWIFGI93gLvBre399l4" target="_blank" rel="noopener">
+										<div class="projects__grid__item--image" style="background-image: url('${require(`./images/projects/talk-vuejs-ionic.png`)}');"></div>
 										<div class="title" style="display: block;">VueJS + Ionic = &lt;3</div>
 									</a>
 									<div class="projects__grid__item--tech">Talk <span style="margin: 0 6px;">·</span> 2018</div>
 								</div>
 								<div class="col-sm-6 projects__grid__item" data-groups='["talks"]' style="margin-top: 32px;">
-									<a href="https://docs.google.com/presentation/d/1TDE36MfZrXkY6uj0ZFDfq0lOfVkL4oZAxlFU0suBgJ0" target="_blank">
-										<div class="projects__grid__item--image" style="background-image: url('${require('./images/projects/talk-stencil.png')}');"></div>
+									<a href="https://docs.google.com/presentation/d/1TDE36MfZrXkY6uj0ZFDfq0lOfVkL4oZAxlFU0suBgJ0" target="_blank" rel="noopener">
+										<div class="projects__grid__item--image" style="background-image: url('${require(`./images/projects/talk-stencil.png`)}');"></div>
 										<div class="title" style="display: block;">Stencil: First Look</div>
 									</a>
 									<div class="projects__grid__item--tech">Talk <span style="margin: 0 6px;">·</span> 2017</div>
 								</div>
 								<div class="col-sm-6 projects__grid__item" data-groups='["talks"]' style="margin-top: 32px;">
-									<a href="https://zwacky.github.io/workshop-ionic-pwa/#/" target="_blank">
-										<div class="projects__grid__item--image" style="background-image: url('${require('./images/projects/talk-pwa-with-ionic.png')}')"></div>
+									<a href="https://zwacky.github.io/workshop-ionic-pwa/#/" target="_blank" rel="noopener">
+										<div class="projects__grid__item--image" style="background-image: url('${require(`./images/projects/talk-pwa-with-ionic.png`)}')"></div>
 										<div class="title" style="display: block;">PWAs mit Ionic</div>
 									</a>
 									<div class="projects__grid__item--tech">Workshop Barcelona <span style="margin: 0 6px;">·</span> 2017</div>
 								</div>
 								<div class="col-sm-6 projects__grid__item" data-groups='["talks"]' style="margin-top: 32px;">
-									<a href="https://zwacky.github.io/a-b-testing-with-hybridapps/#/" target="_blank">
-										<div class="projects__grid__item--image" style="background-image: url('${require('./images/projects/talk-a-b-testing-with-hybrid-apps.png')}')"></div>
+									<a href="https://zwacky.github.io/a-b-testing-with-hybridapps/#/" target="_blank" rel="noopener">
+										<div class="projects__grid__item--image" style="background-image: url('${require(`./images/projects/talk-a-b-testing-with-hybrid-apps.png`)}')"></div>
 										<div class="title" style="display: block;">A/B Testing with Hybrid Apps</div>
 									</a>
 									<div class="projects__grid__item--tech">Talk <span style="margin: 0 6px;">·</span> 2016</div>
 								</div>
 								<div class="col-sm-6 projects__grid__item" data-groups='["talks"]' style="margin-top: 32px;">
-									<a href="http://zwacky.github.io/ota-with-hybridapps/#/" target="_blank">
-										<div class="projects__grid__item--image" style="background-image: url('${require('./images/projects/talk-ota.png')}')"></div>
+									<a href="http://zwacky.github.io/ota-with-hybridapps/#/" target="_blank" rel="noopener">
+										<div class="projects__grid__item--image" style="background-image: url('${require(`./images/projects/talk-ota.png`)}')"></div>
 										<div class="title" style="display: block;">OTA with hybrid apps</div>
 									</a>
 									<div class="projects__grid__item--tech">Talk <span style="margin: 0 6px;">·</span> 2016</div>
@@ -280,6 +264,15 @@
 				</div>
 			</div>
 		</section>
+
+		<div class="overlay">
+			<div class="overlay__content">
+				<div class="container" style="position: relative;">
+					<div class="overlay__content__close">close</div>
+					<div class="overlay__content__container"></div>
+				</div>
+			</div>
+		</div>
 
 	</body>
 	

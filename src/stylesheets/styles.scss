@@ -333,6 +333,14 @@ body {
 				}
 			}
 
+			&--play-annotation {
+				color: #404268;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				padding: 10px 15px;
+			}
+
 			&--tech {
 				overflow: hidden;
 				text-overflow: ellipsis;
@@ -415,6 +423,65 @@ body {
 				text-align: left;
 				padding-left: 64px;
 				padding-right: 10%;
+			}
+		}
+	}
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1337;
+	height: 100%;
+	width: 100%;
+	background-color: #e4e4f0f0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background-color 0.4s ease-out;
+	visibility: hidden;
+	cursor: pointer;
+
+	&--shown {
+		visibility: visible;
+	}
+
+	&__content {
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		max-width: 1000px;
+		max-height: 563px;
+
+		&__close {
+			position: absolute;
+			right: 15px;
+			top: -30px;
+			padding-bottom: 10px;
+		}
+
+		&__container {
+			position: relative;
+			padding-bottom: 53.7%;
+			padding-top: 25px;
+			height: 0;
+			background-color: #000;
+
+			@media (max-width: 575px) {
+				height: 100%;
+			}
+
+			iframe {
+				position: absolute;
+				top: 0;
+				margin: 0 auto;
+				left: 0;
+				right: 0;
+				width: 100%;
+				height: 100%;
+				// max-width: 1000px;
+				// max-height: 80%;
 			}
 		}
 	}

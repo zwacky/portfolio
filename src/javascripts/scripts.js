@@ -47,6 +47,21 @@ document.addEventListener('DOMContentLoaded', function() {
 			shuffle.filter(groups);
 		});
 	});
+	const youtubePlayElem = document.querySelector('#youtube-play');
+	if (youtubePlayElem) {
+		const overlay = document.querySelector('.overlay');
+		const content = document.querySelector('.overlay__content__container');
+		youtubePlayElem.addEventListener('click', evt => {
+			evt.preventDefault();
+			content.innerHTML =
+				'<iframe width="100%" height="800" src="https://www.youtube.com/embed/0r946bZIEDA?rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+			overlay.classList.toggle('overlay--shown');
+		});
+		document.querySelector('.overlay').addEventListener('click', () => {
+			overlay.classList.toggle('overlay--shown');
+			content.innerHTML = '';
+		});
+	}
 });
 
 function setActive(activeElement) {
